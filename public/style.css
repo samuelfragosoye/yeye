@@ -1,3 +1,33 @@
-body {
-    
+body {   margin: 0px;
+   padding: 0px;
+   font-family: Arial, Helvetica, sans-serif;
 }
+
+.album-card {
+    display:inline-block;
+    width:calc(33% - 16px);
+    background-color: #DDD;
+    vertical-align: top;
+    margin: 7px;
+    padding: 10px;
+    border: 3px solid #777;
+    border-radius: 10px;
+    box-sizing: border-box;
+ }
+ .album-card img {
+   display: block;
+   width: 100%;
+   margin-bottom: 10px;
+  }
+  .album-card p {
+   font-size: 11pt;
+  }
+  .album-card h3 {
+   font-style:italic ;
+   color: crimson;
+  }
+
+  .header-content h1 {
+   font-size: 400%;
+   text-align: center;
+  }
