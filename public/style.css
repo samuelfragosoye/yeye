@@ -30,6 +30,49 @@ nav a:active {
     color: #CCC
 }
 
+.form-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+.form-section form {
+  display:inline-block;
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  border: 2px solid #777;
+}
+
+.form-section form:hover {
+     
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-section button:hover {
+  background: #333;
+  transform: translateY(-2.5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 2s ease;
+
+}
+.form-section button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
 .header-content h1 {
    font-size: 400%;
    text-align: center;
@@ -39,6 +82,24 @@ nav a:active {
     font-size: 120%;
     text-align: center;
   }
+
+  .section-title {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 2.2rem;
+            color: #2c2c2c;
+            position: relative;
+        }
+
+ .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #2c2c2c;
+            margin: 10px auto;
+        }        
+
 .album-card:hover {
      transform: translateY(-10px);
      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
@@ -54,7 +115,7 @@ nav a:active {
     border-radius: 10px;
     box-sizing: border-box;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
  }
 
