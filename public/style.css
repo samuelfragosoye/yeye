@@ -1,8 +1,48 @@
 body {   margin: 0px;
    padding: 0px;
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+header {
+    background-color: black;
+    padding: 0.5rem 1rem;
+}
+
+header ul {  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    gap: 3.5rem;
+}
+
+nav a:link,
+nav a:visited {
+    color: white;
+    text-decoration: none;
+}
+nav a:hover {
+    color: lightgray;
+}
+
+nav a:active {
+    color: #CCC
+}
+
+.header-content h1 {
+   font-size: 400%;
+   text-align: center;
+  }
+
+  .header-content p {
+    font-size: 120%;
+    text-align: center;
+  }
+.album-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
 .album-card {
     display:inline-block;
     width:calc(33% - 16px);
@@ -13,6 +53,9 @@ body {   margin: 0px;
     border: 3px solid #777;
     border-radius: 10px;
     box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
  }
  .album-card img {
    display: block;
@@ -23,11 +66,17 @@ body {   margin: 0px;
    font-size: 11pt;
   }
   .album-card h3 {
-   font-style:italic ;
-   color: crimson;
+
+   color: #333;
   }
 
-  .header-content h1 {
-   font-size: 400%;
-   text-align: center;
+  footer {
+    font-size: smaller;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 2rem;
+    position: static;
   }
+
+  
