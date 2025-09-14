@@ -43,7 +43,7 @@ header nav a:hover {
 /* --- Banner Principal --- */
 
 .banner {
-  background-image: url('/images/banner.jpeg');
+  background-image: url('/public/images/banner.jpeg');
   background-size: cover;
   background-position: center;
   color: white;
