@@ -3,91 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto DIW - Kanye West</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Kanye West - Fan Page</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
+        <div class="logo">
+            <h1>Ye Fan Page</h1>
+        </div>
         <nav class="menu-navegacao">
             <ul>
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#sobre">SOBRE</a></li>
                 <li><a href="#discografia">DISCOGRAFIA</a></li>
                 <li><a href="#polemicas">POLÊMICAS</a></li>
-                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="#footer">RODAPÉ</a></li>
             </ul>
         </nav>
     </header>
-<main>   
-    <section class="form-section">
-        <form action="index.html" method="get">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-    <br><br>
-  <label for="email">Digite seu e-mail:</label>
-  <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-  <br><br>
-
-  <button type="submit">Inscrever-se</button>
-</form>
-    </section>
-    <section class="hero">
-     <div class="header-content">
-              <h1>YE</h1>
-              <p class="subtitle">Discografia Completa & Principais Polêmicas</p>
+<main>
+    
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <h1>Kanye</h1>
+            <p>Explore a discografia completa e os momentos marcantes da carreira de Kanye West, um dos artistas mais influentes do nosso tempo.</p>
         </div>
-    </section>
-    <section id="discografia" class="albums-section">
-    <div class="container">
-        <h2 class="section-title">DISCOGRAFIA</h2>
-        <div class="albums-grid">
-            <!-- TCD -->
-             <div class="album-card">
-                <img src="https://picsum.photos/id/237/300/300" alt="TCD">
-                <div class="album-info">
-                    <h3 class="album-title">Album #1 TCD</h3>
-                    <p class="album-year">2004</p>
-                    <article>Informações sobre o álbum</article>
-                    <div class="album-tracks">
-                        <strong>Principais faixas:</strong> Música 1 Música 2 Música 3
-                    </div>
-                </div>
-             </div>
-
-            <!-- LR -->
-            <div class="album-card">
-                <img src="https://picsum.photos/id/237/300/300" alt="LR">
-                <div class="album-info">
-                    <h3 class="album-title">Album #2 Late Registration</h3>
-                    <p class="album-year">2005</p>
-                    <article>Informações sobre o álbum</article>
-                    <div class="album-tracks">
-                       <strong>Principais faixas:</strong> Música 1 Música 2 Música 3 
-                    </div>
-                </div>
-            </div>
-
-            <!--Graduation-->
-            <div class="album-card">
-                <img src="https://picsum.photos/id/237/300/300" alt="LR">
-                <div class="album-info">
-                    <h3 class="album-title">Album #3 Graduation</h3>
-                    <p class="album-year">2007</p>
-                    <article>Informações sobre o álbum</article>
-                    <div class="album-tracks">
-                       <strong>Principais faixas:</strong> Música 1 Música 2 Música 3 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     </section>
 </main>
+    <section id="discografia" class="secao-cards">
+        <h2>Discografia</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="images/album1.png" alt="Capa do álbum The College Dropout">
+                <h3>The College Dropout</h3>
+                <p>O álbum de estreia que redefiniu o hip-hop com suas batidas soul e letras introspectivas. Lançado em 2004.</p>
+            </div>
+            <div class="card">
+                <img src="images/album2.png" alt="Capa do álbum Late Registration">
+                <h3>Late Registration</h3>
+                <p>O segundo álbum que elevou o rap com arranjos orquestrais e produção inovadora. Lançado em 2005.</p>
+            </div>
+            <div class="card">
+                <img src="images/album3.png" alt="Capa do álbum Graduation">
+                <h3>Graduation</h3>
+                <p>Marcou a transição para um som mais eletrônico e de arena, consolidando seu status de superestrela global em 2007.</p>
+            </div>
+            <div class="card">
+                <img src="images/album4.jpg" alt="Capa do álbum 808s & Heartbreak">
+                <h3>808s & Heartbreak</h3>
+                <p>Um álbum inovador que incorporou o uso pesado do Auto-Tune e temas de vulnerabilidade emocional, lançado em 2008.</p>
+            </div>
+            <div class="card">
+                <img src="images/album5.jpg" alt="Capa do álbum My Beautiful Dark Twisted Fantasy">
+                <h3>My Beautiful Dark Twisted Fantasy</h3>
+                <p>Considerado por muitos uma obra-prima, este álbum de 2010 é uma exploração maximalista da fama e do excesso.</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <div class="container">
+        <div class="footer-container">
             <p>Projeto Acadêmico - Ciência da Computação</p>
-            <p>Autor: Samuel Fragoso</p>
+            <p>Autor: Samuel Fragoso | email: samuel.fragoso@sga.pucminas.br</p>
             <p>Página sobre a discografia e polêmicas de Kanye West</p>
         </div>
     </footer>

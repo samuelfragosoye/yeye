@@ -31,7 +31,7 @@ Nessa atividade, você deverá montar a página inicial do projeto escolhido, a 
 
 ## Print da home-page criada
 
-![Print da homepage](public/IMAGENS/home-page.png)
+![Print da homepage](public/IMAGENS/home-page1.png)
 
 ![Print da homepage2](public/IMAGENS/home-page2.png)
 
