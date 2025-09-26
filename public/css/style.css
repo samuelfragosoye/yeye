@@ -79,6 +79,12 @@ header nav a:hover {
   margin: 0 auto;
 }
 
+/*.card :hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition:  0.3s ease;
+}
+*/
 .card {
   background-color: white;
   border: 1px solid #ddd;
