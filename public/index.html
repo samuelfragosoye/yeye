@@ -4,136 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanye West - Fan Page</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>Ye Fan Page</h1>
-        </div>
-        <nav class="menu-navegacao">
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#sobre">SOBRE</a></li>
-                <li><a href="#discografia">DISCOGRAFIA</a></li>
-                <li><a href="#polemicas">POLÊMICAS</a></li>
-                <li><a href="#footer">RODAPÉ</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Ye Fan Page</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre">SOBRE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#discografia">DISCOGRAFIA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#polemicas">POLÊMICAS</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-<main>
-    
-    <section id="home" class="banner">
-        <div class="banner-content">
-            <h1>Kanye</h1>
-            <p>Explore a discografia completa e os momentos marcantes da carreira de Kanye West, um dos artistas mais influentes do nosso tempo.</p>
+
+    <main id="home">
+        <section class="banner">
+            <div class="banner-content">
+                <h1>Kanye</h1>
+                <p>Explore a discografia completa e os momentos marcantes da carreira de Kanye West, um dos artistas mais influentes do nosso tempo.</p>
+            </div>
+        </section>
+    </main>
+
+    <section id="discografia" class="secao-cards py-5">
+       <div class="container">
+    <h2 class="text-center mb-5">Discografia</h2>
+
+    <div id="discografia-cards-container" class="row justify-content-center">
         </div>
+</div>
     </section>
-</main>
-    <section id="discografia" class="secao-cards">
-        <h2>Discografia</h2>
-        <div class="cards-container">
-            <div class="card">
-                <img src="images/album1.png" alt="Capa do álbum The College Dropout">
-                <h3>The College Dropout</h3>
-                <p>O álbum de estreia que redefiniu o hip-hop com suas batidas soul e letras introspectivas. Lançado em 2004.</p>
-            </div>
-            <div class="card">
-                <img src="images/album2.png" alt="Capa do álbum Late Registration">
-                <h3>Late Registration</h3>
-                <p>O segundo álbum que elevou o rap com arranjos orquestrais e produção inovadora. Lançado em 2005.</p>
-            </div>
-            <div class="card">
-                <img src="images/album3.png" alt="Capa do álbum Graduation">
-                <h3>Graduation</h3>
-                <p>Marcou a transição para um som mais eletrônico e de arena, consolidando seu status de superestrela global em 2007.</p>
-            </div>
-            <div class="card">
-                <img src="images/album4.jpg" alt="Capa do álbum 808s & Heartbreak">
-                <h3>808s & Heartbreak</h3>
-                <p>Um álbum inovador que incorporou o uso pesado do Auto-Tune e temas de vulnerabilidade emocional, lançado em 2008.</p>
-            </div>
-            <div class="card">
-                <img src="images/album5.jpg" alt="Capa do álbum My Beautiful Dark Twisted Fantasy">
-                <h3>My Beautiful Dark Twisted Fantasy</h3>
-                <p>Considerado por muitos uma obra-prima, este álbum de 2010 é uma exploração maximalista da fama e do excesso.</p>
-            </div>
-            <div class="card">
-                <img src="images/album6.jpg" alt="Capa do álbum Watch the Throne">
-                <h3>Watch the Throne</h3>
-                <p>Uma colaboração monumental que celebra o luxo, o sucesso e a cultura afro-americana com uma produção grandiosa e letras afiadas. Lançado em 2011.</p>
-            </div>
-            <div class="card">
-                <img src="images/album7.jpg" alt="Cap                               a do álbum Yeezus">
-                <h3>Yeezus</h3>
-                <p>Marcado por uma sonoridade industrial, minimalista e agressiva, este álbum de 2013 é uma obra de protesto e confronto sonoro.</p>
-            </div>
-            <div class="card">
-                <img src="images/album8.png" alt="Capa do álbum The Life of Pablo">
-                <h3>The Life of Pablo</h3>
-                <p>Um álbum "vivo" e multifacetado que mistura gospel, trap e soul, refletindo um período de caos criativo e espiritualidade. Lançado em 2016.</p>
-            </div>
-            <div class="card">
-                <img src="images/album9.png" alt="Capa do álbum Ye">
-                <h3>Ye</h3>
-                <p>Em sete faixas introspectivas, este projeto de 2018 explora temas como saúde mental, família e as controvérsias de sua vida pessoal.</p>
-            </div>
-            <div class="card">
-                <img src="images/album10.jpg" alt="Capa album Kids See Ghosts">
-                <h3>Kids See Ghosts</h3>
-                <p>Álbum gospel de 2019 que consolidou a virada religiosa de Kanye, com forte influência coral.</p>
-            </div>
-            <div class="card">
-                <img src="images/album11.jpg" alt="Capa album Jesus is King">
-                <h3>Jesus is King</h3>
-                <p>Álbum gospel de 2019 que consolidou a virada religiosa de Kanye, com forte influência coral.</p>
-            </div>
-            <div class="card">
-                <img src="images/album12.webp" alt="Capa album Donda">
-                <h3>Donda</h3>
-                <p>Homenagem à sua mãe, combinando emoção e grandiosidade em um projeto de 2021.</p>
-            </div>
-            <div class="card">
-                <img src="images/album13.png" alt="Capa album Vultures 1">
-                <h3>Vultures 1</h3>
-                <p>Primeira parte de sua colaboração mais recente, com energia crua e experimental. Lançado em 2024.</p>
-            </div>
-            <div class="card">
-                <img src="images/album14.jpg" alt="Capa album Vultures 2">
-                <h3>Vultures 2</h3>
-                <p>Sequência de 2024 que ampliou a estética sombria e provocadora do projeto.</p>
-            </div>
-            <div class="card">
-                <img src="images/album15.jpg" alt="Capa album Donda 2">
-                <h3>Donda 2</h3>
-                <p>Lançado em 2025, continua a homenagem à sua mãe, apresentado de forma inacabada e exclusiva.</p>
-            </div>
-        </div>
-    </section>
-    <section class="polemicas">
-        <h2>Principais Polêmicas</h2>
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <div class="timeline-date">2004</div>
-                <h3 class="timeline-title">George Bush não se importa com pessoas negras</div>
-                <p>Durante telethon da MTV para arrecadar fundos para o furacão Katrina, Kanye desviou do roteiro e criticou o então presidente George W. Bush, dizendo "George Bush não se importa com pessoas negras"</p>
-            </div>
+  <section id="polemicas" class="secao-cards py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Principais Polêmicas</h2>
+        <div class="timeline">
+
             <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2005</div>
+                <div class="timeline-content">
+                    <h3>"George Bush não se importa com pessoas negras"</h3>
+                    <p>Durante uma transmissão ao vivo para arrecadar fundos para as vítimas do furacão Katrina, Kanye West declarou que o então presidente não se importava com a população negra.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
                 <div class="timeline-date">2009</div>
-                <h3 class="timeline-title">Interrupção do discurso de Taylor Swift no VMA</h3>
-                <p>Kanye subiu no palco durante o discurso de aceitação de Taylor Swift no MTV Video Music Awards, declarando que Beyoncé deveria ter ganhado o prêmio. O incidente gerou enorme reação negativa.</p>
+                <div class="timeline-content">
+                    <h3>Interrupção de Taylor Swift no VMA</h3>
+                    <p>Kanye subiu ao palco e interrompeu o discurso de Taylor Swift no VMA, afirmando que o prêmio deveria ter sido de Beyoncé. O ato foi criticado mundialmente.</p>
+                </div>
             </div>
-            <div>
-                
+
             </div>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-container">
-            <p>Projeto Acadêmico - Ciência da Computação</p>
-            <p>Autor: Samuel Fragoso | email: samuel.fragoso@sga.pucminas.br</p>
-            <p>Página sobre a discografia e polêmicas de Kanye West</p>
+    </div>
+</section>
+    <footer id="contato" class="bg-black text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1">Projeto Acadêmico - Ciência da Computação</p>
+            <p class="mb-1">Autor: Samuel Fragoso | email: samuel.fragoso@sga.pucminas.br</p>
+            <p class="mb-0">Página sobre a discografia e polêmicas de Kanye West</p>
         </div>
     </footer>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </body>
 </html>
