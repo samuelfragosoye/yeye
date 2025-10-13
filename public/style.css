@@ -33,7 +33,12 @@ body {
 .secao-cards h2 {
   font-size: 2.2rem;
 }
+/* --- carrossel ---*/
 
+.carousel-caption h5,
+.carousel-caption p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); 
+}
 
  /* --- timeline polemicas ---*/
 
