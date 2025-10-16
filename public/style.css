@@ -216,3 +216,26 @@ body {
         font-size: 1rem;
     }
 }
+
+/* --- ESTILOS DO NOVO RODAPÉ --- */
+
+
+.info-icon {
+  width: 20px;
+  text-align: center;
+  margin-right: 8px;
+  color: #555;
+}
+
+
+.social-icon {
+  font-size: 1.8rem; 
+  color: #333; 
+  margin-right: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease; 
+}
+
+.social-icon:hover {
+  color: #007bff; 
+}
