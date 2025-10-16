@@ -24,8 +24,16 @@ const albuns =[
         ],
         imagens_era: [
             {
-                legenda:"" ,
-                imagem:""
+                legenda:"Antes de qualquer fama, antes das controvérsias — era só um garoto com um sonho, um urso de pelúcia e batidas que mudariam o rap pra sempre. Kanye transformou a sala de aula em estúdio e a rotina em arte." ,
+                imagem:"images/secundario/tcdsecundario01.jpeg"
+            },
+            {
+                legenda:"O ‘dropout’ que não precisava de diploma pra provar que era gênio. No banco da escola ou no topo do mundo, Kanye já sabia que seu caminho era escrever história, não fazer prova" ,
+                imagem:"images/secundario/tcdsecundario02.jpeg"
+            },
+            {
+                legenda:"Com o urso no peito e a alma no microfone, ele levou o espírito universitário pra dentro do hip hop — e mostrou que vulnerabilidade e ego podem coexistir na mesma faixa." ,
+                imagem:"images/secundario/tcdsecundario03.jpeg"
             }
         ]
     },
@@ -38,14 +46,30 @@ const albuns =[
         conteudo: "Com Late Registration (2005), Kanye expandiu sua paleta sonora, colaborando com o compositor Jon Brion para incorporar arranjos orquestrais complexos, criando um som mais grandioso e cinematográfico.\n Cinco singles foram retirados de Late Registration, incluindo os hits internacionais Touch the Sky, Heard 'Em Say e Gold Digger, que atingiu primeiro lugar na Billboard Hot 100. Foram produzidos vídeos para todos os cinco singles. Para divulgar o álbum West fez uma turnê promocional, e gravou o álbum ao vivo Late Orchestration.",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
+                nome: "Touch The Sky",
+                imagem: "images/album2.png"
+            },
+            {
+                nome: "Gold Digger",
+                imagem: "images/album2.png"
+            },
+            {
+                nome: "Roses",
+                imagem: "images/album2.png"
             }
         ],
         imagens_era: [
             {
-                legenda:"" ,
-                imagem:""
+                legenda:"Entre livros e batidas, nasceu a lição mais importante: o conhecimento vem de muitos lugares, mas a inspiração vem de dentro. O ‘College Dropout’ não fugiu da escola — ele só criou a própria." ,
+                imagem:"images/secundario/lrsecundario01.jpeg"
+            },
+            {
+                legenda:"Enquanto o mundo esperava que ele aprendesse fórmulas, ele preferiu reinventar o som. ‘Late Registration’ foi mais do que um álbum — foi uma aula sobre persistência, estética e propósito." ,
+                imagem:"images/secundario/lrsecundario02.jpeg"
+            }, 
+            {
+                legenda:"Entre cabos, MPCs e sonhos, nascia um novo capítulo na música. Kanye não produzia só batidas — ele produzia a si mesmo, nota por nota, rima por rima." ,
+                imagem:"images/secundario/lrsecundario03.jpeg"
             }
         ]
     },
@@ -59,14 +83,34 @@ const albuns =[
         imagem_carousel: "images/graduation_banner.jpeg",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
-            }
+                nome: "Stronger",
+                imagem: "images/album3.png"
+            },
+            {
+                nome: "I Wonder",
+                imagem: "images/album3.png"
+            },
+            {
+                nome: "Flashing Lights",
+                imagem: "images/album3.png"
+            },
+            {
+                nome: "Can't Tell Me Nothing",
+                imagem: "images/album3.png"
+            },
         ],
         imagens_era: [
             {
-                legenda:"" ,
-                imagem:""
+                legenda:"Do porão da universidade para as catedrais do rap, Kanye se tornou o aluno que virou mestre. Cada verso uma tese, cada sample uma revolução sonora." ,
+                imagem:"images/secundario/graduationsecundario01.jpeg"
+            },
+            {
+                legenda:"Palco lotado, luzes acesas, a voz do dropout ecoa: não há limites pra quem acredita no próprio som. O microfone virou diploma, e o mundo virou plateia." ,
+                imagem:"images/secundario/graduationsecundario02.jpeg"
+            },
+            {
+                legenda:"No fim da trilogia, o urso se forma — e com ele, toda uma geração que aprendeu a sonhar alto. ‘Graduation’ não foi o fim da jornada, foi apenas o início da lenda." ,
+                imagem:"images/secundario/graduationsecundario03.jpeg"
             }
         ]   
     },
@@ -384,6 +428,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
             detalhesContainer.innerHTML = detalheHtml;
+            const imagensEraContainer = document.getElementById('imagens-era-container');
+            if(imagensEraContainer && album.imagens_era && album.imagens_era.length > 0) {
+                album.imagens_era.forEach(imagem => {
+                    const imagemHtml = `
+                    <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="${imagem.imagem}" class="card-img-top card-img-uniforme" alt="${imagem.legenda}">
+                                <div class="card-body">
+                                    <p class="card-text text-center">${imagem.legenda}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    imagensEraContainer.innerHTML += imagemHtml;
+                });
+            }
             const faixasContainer = document.getElementById('faixas-container');
             if (faixasContainer && album.faixas_destaques && album.faixas_destaques.length > 0){
                 album.faixas_destaques.forEach(faixa => {
@@ -399,22 +459,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
                     faixasContainer.innerHTML += faixaHtml;
                 })
-            }
-            const imagensEraContainer = document.getElementById('imagens-eracontainer');
-            if(imagensEraContainer && album.imagens_era && album.imagens_era.length > 0) {
-                album.imagens_era.forEach(imagem => {
-                    const imagemHtml = `
-                    <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="${imagem.imagem}" class="card-img-top card-img-uniforme" alt="${imagem.legenda}">
-                                <div class="card-body">
-                                    <p class="card-text text-center">${imagem.legenda}</p>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    imagensEraContainer.innerHTML += imagemHtml;
-                });
             }
         } else {
             detalhesContainer.innerHTML = "<p class='text-center'>Álbum não encontrado.</p>";
