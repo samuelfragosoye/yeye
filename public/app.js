@@ -463,5 +463,22 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             detalhesContainer.innerHTML = "<p class='text-center'>Álbum não encontrado.</p>";
         }
+        const initSlider = (containerId, prevBtnId, nextBtnId) => {
+            const sliderContainer = document.getElementById(containerId);
+            const prevBtn = document.getElementById(prevBtnId);
+            const nextBtn = document.getElementById(nextBtnId);
+
+            if (!sliderContainer || !prevBtn || !nextBtn) return;
+            const scrollAmount = sliderContainer.querySelector(':first-child').offsetWidth + 16;
+
+            nextBtn.addEventListener('click', () => {
+                sliderContainer.scrollLeft += scrollAmount;
+            });
+            prevBtn.addEventListener('click', () => {
+                sliderContainer.scrollLeft -= scrollAmount;
+            });
+        };
+        initSlider('imagens-era-container', 'imagens-prev-btn', 'imagens-next-btn');
+        initSlider('faixas-container', 'faixas-prev-btn', 'faixas-next-btn');
     }
 });

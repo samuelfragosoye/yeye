@@ -12,6 +12,57 @@ body {
   object-fit: cover;
 }
 
+/* --- ESTILOS DO SLIDER CUSTOMIZADO --- */
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.slider-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.slider-container > .col-lg-3,
+.slider-container > .col-md-4 {
+  flex-shrink: 0;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+  left: -15px;
+}
+
+.next-btn {
+  right: -15px;
+}
 
 /* --- Banner Principal --- */
 
