@@ -123,14 +123,30 @@ const albuns =[
         conteudo:"Lançado em 2008, 808s & Heartbreak representou uma revolução sonora e emocional na carreira de Kanye West. Após a trágica morte de sua mãe e o fim de um relacionamento, West canalizou sua dor em um projeto minimalista e experimental. Utilizando a bateria eletrônica Roland TR-808 e o Auto-Tune como ferramenta expressiva para cantar sobre perda e solidão, Kanye criou uma obra que quebrou as convenções do hip-hop. O álbum foi inicialmente recebido com ceticismo, mas sua influência se provou profunda, inspirando uma nova geração de artistas de hip-hop e R&B que abraçariam a vulnerabilidade emocional como tema central.",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
+                nome: "Heartless",
+                imagem: "images/album4.jpg"
+            },
+            {
+                nome: "Love Lockdown",
+                imagem: "images/album4.jpg"
+            },
+            {
+                nome: "Paranoid",
+                imagem: "images/album4.jpg"
             }
         ],
         imagens_era: [
             {
-                legenda:"" ,
-                imagem:""
+                legenda:"Com um visual mais limpo e elegante, Kanye deixava pra trás o brilho da era anterior e entrava em um momento de introspecção. Essa fase marcou uma virada emocional e estética, com foco na vulnerabilidade e no minimalismo." ,
+                imagem:"images/secundario/80801.jpeg"
+            },
+            {
+                legenda:"A combinação entre arte pop e sentimentos reais definiu essa era. O álbum misturou sons eletrônicos com letras sobre perda e solidão, criando uma identidade visual e sonora totalmente nova no hip hop." ,
+                imagem:"images/secundario/80802.jpeg"
+            },
+            {
+                legenda:"Nos palcos, Kanye manteve a sofisticação do terno, mas com uma energia mais contida e emocional. Cada performance refletia o tom melancólico e inovador que marcou o 808s & Heartbreak." ,
+                imagem:"images/secundario/80803.jpeg"
             }
         ]    
     },
@@ -144,14 +160,38 @@ const albuns =[
         imagem_carousel: "images/mbdtf_banner.jpeg",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
+                nome: "POWER",
+                imagem: "images/album5.jpg"
+            },
+            {
+                nome: "Monster",
+                imagem: "images/album5.jpg"
+            },
+            {
+                nome: "Devil In A New Dress",
+                imagem: "images/album5.jpg"
+            },
+            {
+                nome: "Runaway",
+                imagem: "images/album5.jpg"
             }
         ],
         imagens_era: [
             {
-                legenda:"" ,
-                imagem:""
+                legenda:"Com uma estética teatral e marcante, Kanye transformou cada apresentação em um espetáculo visual. O vermelho simboliza poder, paixão e conflito — tudo o que define essa fase intensa." ,
+                imagem:"images/secundario/mbdtf01.jpeg"
+            },
+            {
+                legenda:"Entre o céu e o inferno, entre o amor e o excesso. As letras e a sonoridade exploram os altos e baixos da fama, com um tom grandioso e introspectivo." ,
+                imagem:"images/secundario/mbdtf04.jpeg"
+            },
+            {
+                legenda:"O urso clássico retorna, mas agora de forma sombria e fragmentada. É um símbolo da transformação de Kanye — da inocência das primeiras eras para a complexidade de um artista em crise e reinvenção." ,
+                imagem:"images/secundario/mbdtf03.jpeg"
+            },
+            {
+                legenda:"A arte e a confusão se misturam. O visual caótico e distorcido reflete o estado mental e emocional de Kanye durante a criação do álbum — uma mistura de genialidade e descontrole." ,
+                imagem:"images/secundario/mbdtf02.jpeg"
             }
         ]
     },
@@ -164,14 +204,30 @@ const albuns =[
         conteudo: "Watch The Throne (2011) marca a colaboração monumental entre Kanye West e Jay-Z, dois dos maiores nomes do hip-hop. O álbum é uma celebração opulenta do sucesso, luxo e excelência negra, com produções suntuosas que incorporam desde samples de soul clássico até elementos eletrônicos modernos. Tracks como N***as in Paris e Otis se tornaram hinos culturais, enquanto letras como Murder to Excellence abordam questões raciais com profundidade. O projeto foi acompanhado por uma turnê mundial espetacular que solidificou seu status como um dos eventos mais significativos da música contemporânea.",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
+                nome: "No Church In The Wild",
+                imagem: "images/album6.jpg"
+            },
+            {
+                nome: "Ni**as In Paris",
+                imagem: "images/album6.jpg"
+            },
+            {
+                nome: "Otis",
+                imagem: "images/album6.jpg"
             }
         ],
         imagens_era: [
             {
-                legenda:"" ,
-                imagem:""
+                legenda:"Dois ícones frente a frente, planejando o próximo passo. ‘Watch the Throne’ uniu duas das maiores mentes do rap em um projeto que celebrava conquistas, ambição e legado." ,
+                imagem:"images/secundario/wtt01.jpeg"
+            },
+            {
+                legenda:"Entre camaradagem e competição, Kanye e Jay-Z mostraram sintonia dentro e fora do estúdio. A parceria misturava respeito mútuo e energia criativa no auge das carreiras de ambos." ,
+                imagem:"images/secundario/wtt02.jpeg"
+            },
+            {
+                legenda:"Com a bandeira americana ao fundo, a dupla simbolizou poder e sucesso no cenário global. ‘Watch the Throne’ foi mais que um álbum — foi uma declaração de grandeza compartilhada." ,
+                imagem:"images/secundario/wtt03.jpeg"
             }
         ]
     },
@@ -185,14 +241,42 @@ const albuns =[
         imagem_carousel: "images/yeezus_banner.jpeg",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
+                nome: "On Sight",
+                imagem: "images/album7.jpg"
+            },
+            {
+                nome: "Black Skinhead",
+                imagem: "images/album7.jpg"
+            },
+            {
+                nome: "New Slaves",
+                imagem: "images/album7.jpg"
+            },
+            {
+                nome: "Blood On The Leaves",
+                imagem: "images/album7.jpg"
+            },
+            {
+                nome: "Bound 2",
+                imagem: "images/album7.jpg"
             }
         ],
         imagens_era: [
             {
-                legenda:"" ,
-                imagem:""
+                legenda:"O palco virou um confessionário. Coberto e iluminado, Kanye apresentou uma versão mais intensa e crua de si mesmo, misturando arte, fé e rebeldia em cada performance." ,
+                imagem:"images/secundario/yeezus01.jpeg"
+            },
+            {
+                legenda:"A turnê de ‘Yeezus’ transformou o show em experiência teatral. Cenários grandiosos, temas religiosos e uma atmosfera quase divina reforçavam a dualidade entre ego e redenção." ,
+                imagem:"images/secundario/yeezus02.jpeg"
+            },
+            {
+                legenda:"Com uma produção visual impressionante, Kanye explorou o papel do artista como figura mítica. A estética minimalista e apocalíptica combinava com o som agressivo e inovador do álbum." ,
+                imagem:"images/secundario/yeezus03.jpeg"
+            },
+            {
+                legenda:"Em meio às luzes e à energia do público, Kanye parecia levitar — símbolo da libertação criativa e da intensidade dessa era. Foi o auge da ousadia e da performance como arte." ,
+                imagem:"images/secundario/yeezus04.jpeg"
             }
         ]
     },
@@ -206,14 +290,34 @@ const albuns =[
         imagem_carousel: "images/tlop_banner.jpeg",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
+                nome: "Father Stretch My Hands Pt.1",
+                imagem: "images/album8.png"
+            },
+            {
+                nome: "Famous",
+                imagem: "images/album8.png"
+            },
+            {
+                nome: "Saint Pablo",
+                imagem: "images/album8.png"
             }
         ],
         imagens_era: [
             {
                 legenda:"" ,
-                imagem:""
+                imagem:"images/secundario/tlop01.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/tlop02.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/tlop03.jpeg"
+            },
+            {
+                legenda:"No altar flutuante, Kanye estende a mão para a congregação, elevando a performance a um ato de fé coletiva." ,
+                imagem:"images/secundario/tlop04.jpeg"
             }
         ]
     },
@@ -234,8 +338,20 @@ const albuns =[
         imagens_era: [
             {
                 legenda:"" ,
-                imagem:""
-            }
+                imagem:"images/secundario/ye01.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/ye02.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/ye03.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/ye04.jpeg"
+            },
         ]
     },
     {
@@ -254,8 +370,16 @@ const albuns =[
         imagens_era: [
             {
                 legenda:"" ,
-                imagem:""
-            }
+                imagem:"images/secundario/ksg01.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/ksg02.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/ksg03.jpeg"
+            },
         ]
     },
     {
@@ -274,7 +398,19 @@ const albuns =[
         imagens_era: [
             {
                 legenda:"" ,
-                imagem:""
+                imagem:"images/secundario/jesusking01.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/jesusking02.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/jesusking03.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/jesusking04.jpeg"
             }
         ]
     },
@@ -295,7 +431,23 @@ const albuns =[
         imagens_era: [
             {
                 legenda:"" ,
-                imagem:""
+                imagem:"images/secundario/donda01.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/donda02.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/donda03.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/donda04.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/donda05.jpeg"
             }
         ]
     },
@@ -315,7 +467,23 @@ const albuns =[
         imagens_era: [
             {
                 legenda:"" ,
-                imagem:""
+                imagem:"images/secundario/v01.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/v02.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/v03.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/v04.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/v05.jpeg"
             }
         ]
     },
