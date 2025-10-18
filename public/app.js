@@ -1,3 +1,4 @@
+
 const albuns =[
     {
         id: 1,
@@ -530,6 +531,19 @@ const albuns =[
     
 ];
 
+const polemicas = [
+    {
+        ano: "2005",
+        titulo: "George Bush não se importa com pessoas negras",
+        descricao: "Durante uma transmissão ao vivo para arrecadar fundos para as vítimas do furacão Katrina, Kanye West declarou que o então presidente não se importava com a população negra."
+    },
+    {
+        ano: "2009",
+        titulo: "Interrupção de Taylor Swift no VMA",
+        descricao: "Kanye subiu ao palco e interrompeu o discurso de Taylor Swift no VMA, afirmando que o prêmio deveria ter sido de Beyoncé. O ato foi criticado mundialmente."
+    }
+];
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -573,6 +587,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
             cardsContainer.innerHTML += cardHtml;
+        });
+    }
+    const timelineContainer = document.getElementById('timeline-container');
+    if (timelineContainer) {
+        polemicas.forEach(item => {
+            const timelineItemHtml = `
+               <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">${item.ano}</div>
+                    <div class="timeline-content">
+                        <h3>${item.titulo}</h3>
+                        <p>${item.descricao}</p>
+                    </div>
+                </div>
+            `;
+            timelineContainer.innerHTML += timelineItemHtml;
         });
     }
 
