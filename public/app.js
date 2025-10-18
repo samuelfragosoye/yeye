@@ -637,14 +637,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const nextBtn = document.getElementById(nextBtnId);
 
             if (!sliderContainer || !prevBtn || !nextBtn) return;
-            const scrollAmount = sliderContainer.querySelector(':first-child').offsetWidth + 16;
+            if(sliderContainer.scrollWidth <= sliderContainer.clientWidth){
+                prevBtn.classList.add('hidden');
+                nextBtn.classList.add('hidden');
+                return;
+            }
+            const updateArrowVisibility = () => {
+                prevBtn.classList.toggle('hidden', sliderContainer.scrollLeft <= 0);
+                const isAtEnd = sliderContainer.scrollLeft + sliderContainer.clientWidth >= sliderContainer.scrollWidth - 1;
+                nextBtn.classList.toggle('hidden', isAtEnd);
+            }
 
             nextBtn.addEventListener('click', () => {
+                const scrollAmount = sliderContainer.querySelector(':first-child').offsetWidth + 16;
                 sliderContainer.scrollLeft += scrollAmount;
             });
             prevBtn.addEventListener('click', () => {
+                const scrollAmount = sliderContainer.querySelector(':first-child').offsetWidth + 16;
                 sliderContainer.scrollLeft -= scrollAmount;
             });
+
+            sliderContainer.addEventListener('scroll', updateArrowVisibility);
+            updateArrowVisibility();
         };
         initSlider('imagens-era-container', 'imagens-prev-btn', 'imagens-next-btn');
         initSlider('faixas-container', 'faixas-prev-btn', 'faixas-next-btn');
