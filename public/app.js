@@ -475,23 +475,23 @@ const albuns =[
         ],
         imagens_era: [
             {
-                legenda:"" ,
+                legenda:"A casa simboliza o retorno às origens. Em ‘Donda’, o lar é memória, fé e redenção — um espaço entre o que foi e o que ainda busca ser." ,
                 imagem:"images/secundario/donda01.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Antes do espetáculo, o silêncio. A solidão do processo criativo é onde ‘Donda’ começou — entre o peso das ideias e a calma da reflexão." ,
                 imagem:"images/secundario/donda02.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Esconder o rosto para mostrar a alma. O colete ‘Donda’ é proteção e símbolo: arte como escudo, fé como força." ,
                 imagem:"images/secundario/donda03.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"No vazio do estádio, um ato de entrega. Ajoelhar-se é transformar dor em oração — o momento mais humano de ‘Donda’." ,
                 imagem:"images/secundario/donda04.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Os espinhos representam a dor que molda. Em ‘Donda’, o sofrimento se torna poder, e a arte, redenção." ,
                 imagem:"images/secundario/donda05.jpeg"
             }
         ]
@@ -523,23 +523,23 @@ const albuns =[
         ],
         imagens_era: [
             {
-                legenda:"" ,
+                legenda:"Pureza e mistério. Em Vultures 1, o branco simboliza renascimento — uma nova fase, limpa e livre das amarras." ,
                 imagem:"images/secundario/v01.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"A nova geração sob o mesmo nome. Vultures é herança, continuidade e espírito de criação que passa de pai para filha." ,
                 imagem:"images/secundario/v02.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Unidos na escuridão. Vultures representa irmandade, força coletiva e estilo como manifesto." ,
                 imagem:"images/secundario/v03.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"A sombra também é palco. Vultures vive no contraste entre o sagrado e o sombrio, o luxo e a dor." ,
                 imagem:"images/secundario/v04.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Paz após o caos. Vultures 1 celebra o controle — encontrar serenidade mesmo depois da tempestade." ,
                 imagem:"images/secundario/v05.jpeg"
             }
         ]
@@ -567,19 +567,19 @@ const albuns =[
         ],
         imagens_era: [
             {
-                legenda:"" ,
+                legenda:"Confiança e reinvenção. Vultures 2 representa um artista que domina o próprio caos e transforma a escuridão em estilo." ,
                 imagem:"images/secundario/v2secundario01.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Ao lado de Bianca Censori o contraste entre força e mistério. O visual minimalista reflete a essência de Vultures: arte crua, direta e sem explicações." ,
                 imagem:"images/secundario/v2secundario02.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Entre o luxo e a simplicidade, o contraste cria narrativa. Vultures 2 é sobre presença — não apenas aparência." ,
                 imagem:"images/secundario/v2secundario03.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"O brilho metálico como símbolo de poder. Vultures 2 representa união, confiança e a força de quem já sobreviveu a tudo." ,
                 imagem:"images/secundario/v2secundario04.jpeg"
             },
         ]
@@ -607,15 +607,15 @@ const albuns =[
         ],
         imagens_era: [
             {
-                legenda:"" ,
+                legenda:"O olhar além do humano. Donda 2 reflete a transformação espiritual — quando a visão interior supera o que os olhos veem." ,
                 imagem:"images/secundario/donda201.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Kanye e Future, duas forças criativas lado a lado. Donda 2 nasce da colaboração e da energia bruta de quem vive a arte como batalha." ,
                 imagem:"images/secundario/donda202.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"A casa retorna como símbolo, agora cercada por águas e fogo. Em Donda 2, o passado é purificado e renasce sob uma nova luz." ,
                 imagem:"images/secundario/donda203.jpeg"
             }
         ]
@@ -635,11 +635,6 @@ const polemicas = [
         descricao: "Kanye subiu ao palco e interrompeu o discurso de Taylor Swift no VMA, afirmando que o prêmio deveria ter sido de Beyoncé. O ato foi criticado mundialmente."
     },
     {
-        ano: "2018",
-        titulo: "Apoio a Donald Trump e o boné 'MAGA'",
-        descricao: "Kanye West gerou intensa controvérsia ao expressar publicamente seu apoio ao então presidente Donald Trump, usando o boné 'Make America Great Again' e visitando a Casa Branca."
-    },
-    {
         ano: "2016",
         titulo: "A letra de 'Famous' e a briga com Taylor Swift",
         descricao: "No álbum 'The Life of Pablo', a música 'Famous' continha a letra 'Eu sinto que eu e Taylor ainda podemos fazer sexo / Por quê? Eu fiz aquela vadia famosa'. A controvérsia explodiu, com Kanye e Kim Kardashian afirmando que Taylor havia aprovado a letra em uma ligação, que mais tarde foi vazada."
@@ -648,6 +643,11 @@ const polemicas = [
         ano: "2016",
         titulo: "Dívida de US$ 53 milhões e apelo a Mark Zuckerberg",
         descricao: "Em uma série de tweets, West declarou ter uma dívida pessoal de US$ 53 milhões e pediu publicamente a Mark Zuckerberg para investir US$ 1 bilhão em suas ideias, gerando confusão e debate sobre sua estabilidade financeira."
+    },
+    {
+        ano: "2018",
+        titulo: "Apoio a Donald Trump e o boné 'MAGA'",
+        descricao: "Kanye West gerou intensa controvérsia ao expressar publicamente seu apoio ao então presidente Donald Trump, usando o boné 'Make America Great Again' e visitando a Casa Branca."
     },
     {
         ano: "2020",
