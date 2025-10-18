@@ -305,15 +305,15 @@ const albuns =[
         ],
         imagens_era: [
             {
-                legenda:"" ,
+                legenda:"Um momento marcante, onde tudo parecia se alinhar. A energia, as pessoas, a criação — dava pra sentir que algo importante estava nascendo ali." ,
                 imagem:"images/secundario/tlop01.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Alegria e liberdade em um só clique. A vibe era única, pura celebração entre quem realmente viveu e fez parte da história." ,
                 imagem:"images/secundario/tlop02.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Um abraço que simboliza respeito e parceria. Mais que música, era sobre união e o impacto de uma geração inteira." ,
                 imagem:"images/secundario/tlop03.jpeg"
             },
             {
@@ -332,25 +332,33 @@ const albuns =[
         imagem_carousel: "images/ye_banner.jpeg",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
+                nome: "All Mine",
+                imagem: "images/album9.png"
+            },
+            {
+                nome: "Ghost Town",
+                imagem: "images/album9.png"
+            },
+            {
+                nome: "Violent Crimes",
+                imagem: "images/album9.png"
             }
         ],
         imagens_era: [
             {
-                legenda:"" ,
+                legenda:"Um momento de introspecção nas montanhas. Simples, sereno, mas carregado de sentimento. Era o recomeço, o encontro com o próprio silêncio." ,
                 imagem:"images/secundario/ye01.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Energia leve, risadas e liberdade criativa. O cenário de calmo Wyoming contrastava com o caos interno — e disso nasceu uma das fases mais sinceras." ,
                 imagem:"images/secundario/ye02.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Cercado de amigos e boas vibrações, o clima era de paz. Nada de luxo, só autenticidade e a sensação de estar exatamente onde devia." ,
                 imagem:"images/secundario/ye03.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"No estúdio, o olhar distante e o silêncio dizem mais que qualquer palavra. Um retrato da fase em que a vulnerabilidade virou força, e a música nasceu do peso de simplesmente ser humano." ,
                 imagem:"images/secundario/ye04.jpeg"
             },
         ]
@@ -364,21 +372,29 @@ const albuns =[
         conteudo: "Kids See Ghosts (2018) representa a colaboração perfeita entre Kanye West e Kid Cudi. O álbum é uma jornada psicodélica através dos demônios internos de ambos os artistas, culminando em uma mensagem de esperança e redenção. Combinando elementos de rock psicodélico, hip-hop e música experimental, o projeto aborda temas de depressão, vício e recuperação com uma honestidade brutal. A química entre West e Cudi é palpável, resultando em um trabalho coeso que muitos consideram o ponto alto das Wyoming Sessions e um testemunho do poder terapêutico da criação artística.",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
-            }
+                nome: "4th Dimension",
+                imagem: "images/album10.jpg"
+            },
+            {
+                nome: "Reborn",
+                imagem: "images/album10.jpg"
+            },
+            {
+                nome: "Kids See Ghosts",
+                imagem: "images/album10.jpg"
+            },
         ],
         imagens_era: [
             {
-                legenda:"" ,
+                legenda:"No começo, dois artistas com visões diferentes, mas o mesmo desejo de mudar tudo. O início de uma parceria que redefiniria o som de uma geração." ,
                 imagem:"images/secundario/ksg01.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Anos depois, entre risadas e multidões, a conexão continuava a mesma. Dois gênios que se entendem sem precisar falar muito." ,
                 imagem:"images/secundario/ksg02.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"No meio do caos e da criação, nasceram Kids See Ghosts. Um projeto sobre dor, superação e a beleza de se perder pra se encontrar de novo." ,
                 imagem:"images/secundario/ksg03.jpeg"
             },
         ]
@@ -392,25 +408,37 @@ const albuns =[
         conteudo: "Jesus Is King (2019) marca a transformação mais radical na carreira de Kanye West. Após anos de luta espiritual, West entrega um álbum inteiramente dedicado à sua fé cristã renascida. Abandonando completamente o conteúdo explícito de trabalhos anteriores, o projeto apresenta corais gospel exuberantes, letras devocionais e produções que mesgam hip-hop tradicional com música sacra. Acompanhado pelos Sunday Service Choir, Ye cria uma experiência musical que é tanto uma declaração de fé quanto uma reinvenção artística, dividindo opiniões mas demonstrando seu compromisso inabalável com sua nova direção espiritual.",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
-            }
+                nome: "Selah",
+                imagem: "images/album11.jpg"
+            },
+             {
+                nome: "Follow God",
+                imagem: "images/album11.jpg"
+            },
+             {
+                nome: "Closed On Sunday",
+                imagem: "images/album11.jpg"
+            },
+             {
+                nome: "God Is",
+                imagem: "images/album11.jpg"
+            },
         ],
         imagens_era: [
             {
-                legenda:"" ,
+                legenda:"O palco virou um templo. O coral, um instrumento de fé. A música, uma oração. Jesus Is King marcou o momento em que arte e devoção se tornaram uma só coisa." ,
                 imagem:"images/secundario/jesusking01.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Entre as colinas do Wyoming, um artista em busca de redenção. Cercado por ovelhas, guiado por algo maior que ele mesmo." ,
                 imagem:"images/secundario/jesusking02.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"Longe das luzes e dos palcos, Kanye reencontra o silêncio e a simplicidade. A fé agora é o centro de tudo — e a criação nasce desse encontro." ,
                 imagem:"images/secundario/jesusking03.jpeg"
             },
             {
-                legenda:"" ,
+                legenda:"O olhar firme de quem passou pela tempestade e saiu transformado. Jesus Is King não é só um álbum — é o testemunho de uma alma que decidiu recomeçar." ,
                 imagem:"images/secundario/jesusking04.jpeg"
             }
         ]
@@ -425,9 +453,25 @@ const albuns =[
         imagem_carousel: "images/donda_banner.jpeg",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
-            }
+                nome: "Off The Grid",
+                imagem: "images/album12.webp"
+            },
+            {
+                nome: "Hurricane",
+                imagem: "images/album12.webp"
+            },
+            {
+                nome: "Praise God",
+                imagem: "images/album12.webp"
+            },
+            {
+                nome: "Jesus Lord",
+                imagem: "images/album12.webp"
+            },
+            {
+                nome: "Pure Souls",
+                imagem: "images/album12.webp"
+            },
         ],
         imagens_era: [
             {
@@ -461,9 +505,21 @@ const albuns =[
         conteudo: "Vultures 1 (2024) marca o retorno de Kanye West após um período de intensa controvérsia pública. Em colaboração com Ty Dolla $ign, o álbum aborda diretamente as polêmicas que cercaram o artista, transformando críticas em combustível criativo. As letras oscilam entre a defesa arrogante e a admissão de falhas, enquanto a produção mesma o luxo característico de West com elementos sombrios e industriais. O projeto funciona tanto como um comeback estratégico quanto como um comentário sobre cancelamento cultura e resiliência na era digital, demonstrando a capacidade contínua de West de manter-se no centro das conversas culturais.",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
-            }
+                nome: "PAID",
+                imagem: "images/album13.png"
+            },
+            {
+                nome: "DO IT",
+                imagem: "images/album13.png"
+            },
+            {
+                nome: "VULTURES",
+                imagem: "images/album13.png"
+            },
+            {
+                nome: "CARNIVAL",
+                imagem: "images/album13.png"
+            },
         ],
         imagens_era: [
             {
@@ -497,15 +553,35 @@ const albuns =[
         conteudo: "Vultures 2 expande os temas introduzidos em seu predecessor, aprofundando-se na exploração de relacionamentos conturbados e decadência moral. A colaboração com Ty Dolla $ign atinge novos patamares de coesão, com West entregando algumas de suas letras mais confessais sobre a vida pós-divórcio e as consequências de suas ações públicas. A produção incorpora elementos ainda mais experimentais, incluindo samples obscuros e estruturas não convencionais, criando um retrato sonoro de um artista navegando as complexidades da redenção pessoal e artística em meio ao escrutínio constante.",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
-            }
+                nome: "FIELD TRIP",
+                imagem: "images/album14.jpg"
+            },
+            {
+                nome: "530",
+                imagem: "images/album14.jpg"
+            },
+            {
+                nome: "RIVER",
+                imagem: "images/album14.jpg"
+            },
         ],
         imagens_era: [
             {
                 legenda:"" ,
-                imagem:""
-            }
+                imagem:"images/secundario/v2secundario01.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/v2secundario02.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/v2secundario03.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/v2secundario04.jpeg"
+            },
         ]
     },
     {
@@ -517,14 +593,30 @@ const albuns =[
         conteudo: "Donda 2 (2022) serve como uma sequência profundamente introspectiva ao seu predecessor, focando especificamente no doloroso processo de divórcio de Kim Kardashian e na subsequente reconstrução pessoal. West utiliza o álbum como uma terapia musical, explorando temas de perda conjugal, paternidade solitária e a busca por identidade fora de um casamento público. A produção é mais crua e menos polida que a do primeiro Donda, refletindo o estado emocional vulnerável do artista. O projeto funciona como um documento visceral da jornada de West através do luto relacional e do difícil caminho em direção à autoconsciência e crescimento pessoal.",
         faixas_destaques: [
             {
-                nome: "",
-                imagem: ""
+                nome: "TRUE LOVE",
+                imagem: "images/album15.jpg"
+            },
+            {
+                nome: "BROKEN ROAD",
+                imagem: "images/album15.jpg"
+            },
+            {
+                nome: "CITY OF GOD",
+                imagem: "images/album15.jpg"
             }
         ],
         imagens_era: [
             {
                 legenda:"" ,
-                imagem:""
+                imagem:"images/secundario/donda201.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/donda202.jpeg"
+            },
+            {
+                legenda:"" ,
+                imagem:"images/secundario/donda203.jpeg"
             }
         ]
     }
@@ -541,6 +633,31 @@ const polemicas = [
         ano: "2009",
         titulo: "Interrupção de Taylor Swift no VMA",
         descricao: "Kanye subiu ao palco e interrompeu o discurso de Taylor Swift no VMA, afirmando que o prêmio deveria ter sido de Beyoncé. O ato foi criticado mundialmente."
+    },
+    {
+        ano: "2018",
+        titulo: "Apoio a Donald Trump e o boné 'MAGA'",
+        descricao: "Kanye West gerou intensa controvérsia ao expressar publicamente seu apoio ao então presidente Donald Trump, usando o boné 'Make America Great Again' e visitando a Casa Branca."
+    },
+    {
+        ano: "2016",
+        titulo: "A letra de 'Famous' e a briga com Taylor Swift",
+        descricao: "No álbum 'The Life of Pablo', a música 'Famous' continha a letra 'Eu sinto que eu e Taylor ainda podemos fazer sexo / Por quê? Eu fiz aquela vadia famosa'. A controvérsia explodiu, com Kanye e Kim Kardashian afirmando que Taylor havia aprovado a letra em uma ligação, que mais tarde foi vazada."
+    },
+    {
+        ano: "2016",
+        titulo: "Dívida de US$ 53 milhões e apelo a Mark Zuckerberg",
+        descricao: "Em uma série de tweets, West declarou ter uma dívida pessoal de US$ 53 milhões e pediu publicamente a Mark Zuckerberg para investir US$ 1 bilhão em suas ideias, gerando confusão e debate sobre sua estabilidade financeira."
+    },
+    {
+        ano: "2020",
+        titulo: "Candidatura à Presidência dos EUA",
+        descricao: "West lançou uma campanha presidencial improvável, marcada por um comício conturbado na Carolina do Sul, onde fez declarações emocionais e pessoais sobre sua família, gerando preocupação sobre sua saúde mental."
+    },
+    {
+        ano: "2022",
+        titulo: "Comentários antissemitas e colapso de parcerias",
+        descricao: "Após uma série de comentários considerados antissemitas em entrevistas e redes sociais, grandes marcas como Adidas, Balenciaga e Gap encerraram suas parcerias bilionárias com o artista, resultando em um enorme prejuízo financeiro e de imagem."
     }
 ];
 
