@@ -10,6 +10,10 @@ let albumIdParaEditar = null;
  */
 document.addEventListener('DOMContentLoaded', () => {
     // --- Seleção de Elementos ---
+    const formLogin = document.getElementById('form-login');
+    if (formLogin) {
+        setupLogin();
+    }
     const carouselIndicators = document.getElementById('carousel-indicators-container');
     const discografiaContainer = document.getElementById('discografia-cards-container');
     const timelineContainer = document.getElementById('timeline-container');
@@ -629,4 +633,47 @@ async function carregarGrafico() {
         console.error("Erro ao gerar gráfico:", error);
         ctx.innerHTML = "Erro ao carregar gráfico.";
     }
+}
+// ===================================================================
+// == ETAPA 5: LOGIN
+// ===================================================================
+
+function setupLogin() {
+    const form = document.getElementById('form-login');
+
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const loginInput = document.getElementById('login-usuario').value;
+        const senhaInput = document.getElementById('login-senha').value;
+
+        try {
+            const response = await fetch(`${API_URL}/usuarios`);
+            const usuarios = await response.json();
+
+            // Procura usuário com login e senha iguais
+            const usuarioEncontrado = usuarios.find(user => user.login === loginInput && user.senha === senhaInput);
+
+            if (usuarioEncontrado) {
+                // Salva na sessão (sem a senha por segurança básica)
+                const usuarioSessao = {
+                    id: usuarioEncontrado.id,
+                    nome: usuarioEncontrado.nome,
+                    admin: usuarioEncontrado.admin,
+                    favoritos: usuarioEncontrado.favoritos || []
+                };
+                
+                sessionStorage.setItem('usuarioLogado', JSON.stringify(usuarioSessao));
+                
+                alert(`Bem-vindo, ${usuarioEncontrado.nome}!`);
+                window.location.href = 'index.html'; // Manda para a home logado
+            } else {
+                alert('Login ou senha incorretos!');
+            }
+
+        } catch (error) {
+            console.error(error);
+            alert('Erro ao conectar com servidor de login.');
+        }
+    });
 }

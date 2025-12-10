@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ye Fan Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center" style="height: 100vh;">
+
+    <div class="card shadow p-4" style="max-width: 400px; width: 100%;">
+        <div class="text-center mb-4">
+            <h3>Ye Fan Page</h3>
+            <p class="text-muted">Entre para favoritar álbuns</p>
+        </div>
+
+        <form id="form-login">
+            <div class="mb-3">
+                <label for="login-usuario" class="form-label">Login (Usuário)</label>
+                <input type="text" class="form-control" id="login-usuario" required placeholder="Ex: admin ou user">
+            </div>
+            <div class="mb-3">
+                <label for="login-senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="login-senha" required placeholder="123">
+            </div>
+            <button type="submit" class="btn btn-dark w-100 mb-3">Entrar</button>
+        </form>
+
+        <div class="text-center">
+            <a href="index.html" class="text-decoration-none text-dark">Voltar para Home</a>
+        </div>
+        
+        <div class="mt-3 alert alert-info text-small" style="font-size: 0.85rem;">
+            <strong>Dica de Acesso:</strong><br>
+            Admin: <code>admin</code> / <code>123</code><br>
+            Usuário: <code>user</code> / <code>123</code>
+        </div>
+    </div>
+
+    <script src="assets/scripts/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
