@@ -6,40 +6,60 @@ let albumIdParaEditar = null;
 
 /**
  * Função principal que é executada quando o DOM está pronto.
- * Ela "roteia" a execução para as funções corretas com base nos
- * elementos presentes na página.
+ * Roteia a execução para as funções corretas com base na página atual.
  */
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Elementos da index.html ---
+    // --- Seleção de Elementos ---
     const carouselIndicators = document.getElementById('carousel-indicators-container');
-    const carouselInner = document.getElementById('carousel-inner-container');
     const discografiaContainer = document.getElementById('discografia-cards-container');
     const timelineContainer = document.getElementById('timeline-container');
-
-    // --- Elementos da detalhes.html ---
     const detalhesContainer = document.getElementById('detalhes-album-container');
     const imagensEraContainer = document.getElementById('imagens-era-container');
     const faixasContainer = document.getElementById('faixas-container');
+    const formCadastro = document.getElementById('form-cadastro-album');
+    const graficoContainer = document.getElementById('graficoAlbuns'); // Novo elemento do gráfico
 
-    // --- Elementos da cadastro_album.html ---
-    const formCadastro = document.getElementById('form-cadastro-album'); // Você precisa dar este ID ao seu <form>
+    // --- Listeners de Pesquisa (Adicionados aqui para segurança) ---
+    const btnPesquisar = document.getElementById('btn-pesquisar');
+    const inputPesquisa = document.getElementById('input-pesquisa');
 
-    // --- Roteamento ---
+    if (btnPesquisar) {
+        btnPesquisar.addEventListener('click', () => {
+            const termo = inputPesquisa.value.toLowerCase();
+            carregarDiscografia(termo);
+        });
+    }
 
-    // Se estiver na index.html
+    if (inputPesquisa) {
+        inputPesquisa.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const termo = e.target.value.toLowerCase();
+                carregarDiscografia(termo);
+            }
+        });
+    }
+
+    // --- Roteamento (Lógica do que carregar em cada página) ---
+
+    // 1. Home Page (index.html)
     if (carouselIndicators && discografiaContainer) {
         carregarCarousel();
-        carregarDiscografia();
+        carregarDiscografia(); // Carrega inicial sem filtro
     }
+    
     if (timelineContainer) {
         carregarTimeline();
     }
 
-    // Se estiver na detalhes.html
+    if (graficoContainer) {
+        carregarGrafico(); // <--- O Gráfico é chamado aqui agora!
+    }
+
+    // 2. Detalhes (detalhes.html)
     if (detalhesContainer) {
         carregarDetalhesAlbum();
     }
-    // Inicializa os sliders (Lógica original da detalhes.html)
+    // Inicializa os sliders da página de detalhes
     if (imagensEraContainer) {
         initSlider('imagens-era-container', 'imagens-prev-btn', 'imagens-next-btn');
     }
@@ -47,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         initSlider('faixas-container', 'faixas-prev-btn', 'faixas-next-btn');
     }
 
-    // Se estiver na cadastro_album.html
+    // 3. Cadastro/Edição (cadastro_album.html)
     if (formCadastro) {
         setupFormulario();
     }
@@ -543,5 +563,70 @@ async function toggleFavorito(albumId) {
     } catch (error) {
         console.error("Erro ao salvar favorito:", error);
         alert("Erro ao salvar favorito. Tente novamente.");
+    }
+}
+// ===================================================================
+// == ETAPA 4: VISUALIZAÇÃO AVANÇADA (GRÁFICO CHART.JS)
+// ===================================================================
+
+/**
+ * Carrega os dados e gera um gráfico de barras com Chart.js
+ */
+async function carregarGrafico() {
+    const ctx = document.getElementById('graficoAlbuns');
+    
+    // Se o elemento não existir na página (ex: estamos na página de login), para por aqui.
+    if (!ctx) return; 
+
+    try {
+        const response = await fetch(`${API_URL}/albuns`);
+        const albuns = await response.json();
+
+        // 1. Prepara os dados (Extração)
+        // Rótulos (Eixo X): Títulos dos Álbuns
+        const labels = albuns.map(album => album.titulo);
+        
+        // Dados (Eixo Y): Quantidade de faixas destaques (ou pode usar o ano)
+        // Se o álbum não tiver o array, assume 0
+        const data = albuns.map(album => album.faixas_destaques ? album.faixas_destaques.length : 0);
+
+        // 2. Configura o Gráfico
+        new Chart(ctx, {
+            type: 'bar', // Tipo de gráfico: 'bar', 'line', 'pie', etc.
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Número de Hits em Destaque',
+                    data: data,
+                    backgroundColor: 'rgba(0, 0, 0, 0.7)', // Cor das barras (Preto estilo Ye)
+                    borderColor: 'rgba(0, 0, 0, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1 // Garante que os números sejam inteiros (1, 2, 3...)
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+    } catch (error) {
+        console.error("Erro ao gerar gráfico:", error);
+        ctx.innerHTML = "Erro ao carregar gráfico.";
     }
 }
