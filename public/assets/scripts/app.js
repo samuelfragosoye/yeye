@@ -102,7 +102,19 @@ async function carregarCarousel() {
 /**
  * (R)EAD: Carrega todos os álbuns na discografia da index.html
  */
-async function carregarDiscografia() {
+document.getElementById('btn-pesquisar')?.addEventListener('click', () => {
+    const termo = document.getElementById('input-pesquisa').value.toLowerCase();
+    carregarDiscografia(termo);
+});
+
+document.getElementById('input-pesquisa')?.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        const termo = e.target.value.toLowerCase();
+        carregarDiscografia(termo);
+    }
+});
+
+async function carregarDiscografia(termoBusca= "") {
     const cardsContainer = document.getElementById('discografia-cards-container');
 
     try {
@@ -112,7 +124,17 @@ async function carregarDiscografia() {
         const albuns = await response.json();
         cardsContainer.innerHTML = ''; // Limpa antes de adicionar
 
-        albuns.forEach(album => {
+        const albunsFiltrados = albuns.filter(album=> {
+            return album.titulo.toLowerCase().includes(termoBusca) || 
+                   album.descricao.toLowerCase().includes(termoBusca);
+        })
+
+        if (albunsFiltrados.length === 0) {
+            cardsContainer.innerHTML = '<p class="text-center">Nenhum álbum encontrado.</p>';
+            return;
+        }
+
+        albunsFiltrados.forEach(album => {
             const cardHtml = `
                 <div class="col-lg-4 col-md-6 mb-4 d-flex" id="album-card-${album.id}">
                     <div class="card h-100">
