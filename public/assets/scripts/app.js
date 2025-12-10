@@ -114,20 +114,22 @@ document.getElementById('input-pesquisa')?.addEventListener('keypress', (e) => {
     }
 });
 
-async function carregarDiscografia(termoBusca= "") {
+async function carregarDiscografia(termoBusca = "") {
     const cardsContainer = document.getElementById('discografia-cards-container');
+    const usuario = getUsuarioLogado(); // Pega quem está logado
 
     try {
         const response = await fetch(`${API_URL}/albuns`);
         if (!response.ok) throw new Error('Erro ao carregar discografia.');
 
         const albuns = await response.json();
-        cardsContainer.innerHTML = ''; // Limpa antes de adicionar
+        cardsContainer.innerHTML = '';
 
-        const albunsFiltrados = albuns.filter(album=> {
-            return album.titulo.toLowerCase().includes(termoBusca) || 
-                   album.descricao.toLowerCase().includes(termoBusca);
-        })
+        // Filtra os álbuns
+        const albunsFiltrados = albuns.filter(album => 
+            album.titulo.toLowerCase().includes(termoBusca) || 
+            album.descricao.toLowerCase().includes(termoBusca)
+        );
 
         if (albunsFiltrados.length === 0) {
             cardsContainer.innerHTML = '<p class="text-center">Nenhum álbum encontrado.</p>';
@@ -135,6 +137,36 @@ async function carregarDiscografia(termoBusca= "") {
         }
 
         albunsFiltrados.forEach(album => {
+            let botoesHtml = `<a href="detalhes.html?id=${album.id}" class="btn btn-dark btn-sm me-2">Ver Detalhes</a>`;
+
+            // Lógica dos Botões Condicionais
+            if (usuario) {
+                if (usuario.admin) {
+                    // SE FOR ADMIN: Botões de Editar/Excluir
+                    botoesHtml += `
+                        <a href="cadastro_album.html?id=${album.id}" class="btn btn-warning btn-sm me-2">Editar</a>
+                        <button class="btn btn-danger btn-sm btn-excluir" data-id="${album.id}">Excluir</button>
+                    `;
+                } else {
+                    // SE FOR USUÁRIO COMUM: Botão de Coração
+                    // Verifica se esse álbum já é favorito desse usuário
+                    const isFavorito = usuario.favoritos.includes(album.id);
+                    const classeIcone = isFavorito ? 'bi-heart-fill text-danger' : 'bi-heart';
+                    
+                    botoesHtml += `
+                        <button class="btn btn-outline-dark btn-sm" onclick="toggleFavorito(${album.id})">
+                            <i id="fav-icon-${album.id}" class="bi ${classeIcone}"></i>
+                        </button>
+                    `;
+                }
+            } else {
+                botoesHtml += `
+                    <button class="btn btn-outline-dark btn-sm" onclick="toggleFavorito(${album.id})">
+                        <i class="bi bi-heart"></i>
+                    </button>
+                `;
+            }
+
             const cardHtml = `
                 <div class="col-lg-4 col-md-6 mb-4 d-flex" id="album-card-${album.id}">
                     <div class="card h-100">
@@ -143,10 +175,8 @@ async function carregarDiscografia(termoBusca= "") {
                             <h5 class="card-title">${album.titulo}</h5>
                             <p class="card-text">${album.descricao}</p>
                             
-                            <div class="mt-auto">
-                                <a href="detalhes.html?id=${album.id}" class="btn btn-dark">Ver Detalhes</a>
-                                <a href="cadastro_album.html?id=${album.id}" class="btn btn-warning">Editar</a>
-                                <button class="btn btn-danger btn-excluir" data-id="${album.id}">Excluir</button>
+                            <div class="mt-auto d-flex align-items-center">
+                                ${botoesHtml}
                             </div>
                         </div>
                     </div>
@@ -155,7 +185,6 @@ async function carregarDiscografia(termoBusca= "") {
             cardsContainer.innerHTML += cardHtml;
         });
 
-        // Após criar os cards, adiciona os listeners de exclusão
         adicionarListenersExcluir();
 
     } catch (error) {
@@ -456,3 +485,63 @@ const initSlider = (containerId, prevBtnId, nextBtnId) => {
     sliderContainer.addEventListener('scroll', updateArrowVisibility);
     updateArrowVisibility(); // Define o estado inicial dos botões
 };
+
+/**
+ * Verifica se há um usuário salvo na sessão.
+ * Retorna o objeto do usuário ou null.
+ */
+function getUsuarioLogado() {
+    const userStr = sessionStorage.getItem('usuarioLogado');
+    if (!userStr) return null;
+    return JSON.parse(userStr);
+}
+
+/**
+ * Adiciona ou remove um álbum dos favoritos.
+ */
+async function toggleFavorito(albumId) {
+    const usuario = getUsuarioLogado();
+    
+    if (!usuario) {
+        alert("Você precisa estar logado para favoritar!");
+        window.location.href = "login.html"; // Redireciona para login se não estiver logado
+        return;
+    }
+
+    // 1. Atualiza a lista localmente
+    const index = usuario.favoritos.indexOf(albumId);
+    if (index !== -1) {
+        // Se já existe, remove
+        usuario.favoritos.splice(index, 1); 
+    } else {
+        // Se não existe, adiciona
+        usuario.favoritos.push(albumId);
+    }
+
+    // 2. Atualiza o sessionStorage para a tela não precisar de F5
+    sessionStorage.setItem('usuarioLogado', JSON.stringify(usuario));
+
+    // 3. Atualiza o ícone na tela imediatamente (Feedback visual)
+    const btnIcon = document.getElementById(`fav-icon-${albumId}`);
+    if (btnIcon) {
+        if (usuario.favoritos.includes(albumId)) {
+            btnIcon.classList.remove('bi-heart');
+            btnIcon.classList.add('bi-heart-fill', 'text-danger');
+        } else {
+            btnIcon.classList.remove('bi-heart-fill', 'text-danger');
+            btnIcon.classList.add('bi-heart');
+        }
+    }
+
+    // 4. Salva no Banco de Dados (JSON Server)
+    try {
+        await fetch(`${API_URL}/usuarios/${usuario.id}`, {
+            method: 'PATCH', // PATCH atualiza só o campo que mudou
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ favoritos: usuario.favoritos })
+        });
+    } catch (error) {
+        console.error("Erro ao salvar favorito:", error);
+        alert("Erro ao salvar favorito. Tente novamente.");
+    }
+}
