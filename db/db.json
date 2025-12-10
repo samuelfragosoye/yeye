@@ -681,5 +681,23 @@
       "titulo": "Comentários antissemitas e colapso de parcerias",
       "descricao": "Após uma série de comentários considerados antissemitas em entrevistas e redes sociais, grandes marcas como Adidas, Balenciaga e Gap encerraram suas parcerias bilionárias com o artista, resultando em um enorme prejuízo financeiro e de imagem."
     }
-  ]
+  ],
+  "usuarios": [
+  {
+    "id": "admin-1",
+    "login": "admin",
+    "senha": "530",
+    "nome": "Kanye Fan Admin",
+    "admin": true,
+    "favoritos": [] 
+  },
+  {
+    "id": "user-1",
+    "login": "user",
+    "senha": "123",
+    "nome": "Kim123",
+    "admin": false,
+    "favoritos": [1, 3]
+  }
+]
 }
