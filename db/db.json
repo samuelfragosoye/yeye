@@ -693,7 +693,7 @@
     {
       "id": "admin-1",
       "login": "admin",
-      "senha": "530",
+      "senha": "123",
       "nome": "Kanye Fan Admin",
       "admin": true,
       "favoritos": []
