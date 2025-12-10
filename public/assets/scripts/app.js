@@ -75,6 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (formCadastro) {
         setupFormulario();
     }
+    if (formCadastro) {
+        setupFormulario();
+    }
+
+    atualizarMenu();
 });
 
 // ===================================================================
@@ -676,4 +681,33 @@ function setupLogin() {
             alert('Erro ao conectar com servidor de login.');
         }
     });
+}
+function atualizarMenu() {
+    const menuContainer = document.getElementById('menu-login-container');
+    const navCadastro = document.getElementById('nav-item-cadastro');
+    const usuario = getUsuarioLogado();
+
+    if (usuario) {
+        // Se tem usuário logado, mostra botão de Logout e Saudação
+        menuContainer.innerHTML = `
+            <span class="text-white me-2">Olá, ${usuario.nome.split(' ')[0]}</span>
+            <button onclick="fazerLogout()" class="btn btn-outline-danger btn-sm">Sair</button>
+        `;
+
+        // Se for ADMIN, mostra o botão de cadastrar álbum no menu
+        if (usuario.admin && navCadastro) {
+            navCadastro.innerHTML = `<a class="nav-link text-warning" href="cadastro_album.html">NOVO ÁLBUM</a>`;
+        }
+    } else {
+        // Se não tem ninguém, mostra botão de Login
+        menuContainer.innerHTML = `
+            <a href="login.html" class="btn btn-outline-light btn-sm">Login</a>
+        `;
+        if (navCadastro) navCadastro.innerHTML = '';
+    }
+}
+
+function fazerLogout() {
+    sessionStorage.removeItem('usuarioLogado');
+    window.location.reload(); // Recarrega a página para atualizar o menu
 }
